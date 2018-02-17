@@ -60,6 +60,6 @@ app.use(function (err, req, res, next) {
     res.render('error');
 });
 
-app.listen(config.port, () => {
+app.listen(process.PORT, () => {//config.port, () => {
     console.log(`server is running on port ${config.port}`);
 });
