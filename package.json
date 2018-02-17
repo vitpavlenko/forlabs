@@ -4,6 +4,7 @@
   "description": "easy server for getting labkas",
   "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "node server.js",
     "dev": "nodemon server.js"
   },
