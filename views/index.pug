@@ -1,0 +1,16 @@
+extends layout
+
+block content
+   .container
+    if (!vektor)
+      a(href="/login") Login
+      hr
+      p  Hello there
+    if (vektor)
+      p Ya rad vas privetstvovat O Velikie Node.js Razrabotcheg!!!
+      a(href="/logout") Logout
+      hr
+    a(href="/AMO") AMO
+    br
+    a(href="/WEB") WEB
+    //- a(href="/linux2.0")

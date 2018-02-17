@@ -1,0 +1,21 @@
+extends layout
+
+block content
+   .container
+    a(href="/")="Home"
+    hr
+    h1 Hello on amo
+    if (vektor)
+        p O moi sozdatel
+        input(id="file",type="file",name="file",multiple)
+        br
+    if (!vektor)
+        p typa lahazavr
+    if (files)
+        for file in files
+            br
+            if(vektor)
+                a(href=`/amo/${file}`)=file
+            else 
+                p=file
+    script(src='/js/amo.js')
