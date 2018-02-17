@@ -4,6 +4,7 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
 
 const app = express();
 
@@ -20,7 +21,10 @@ app.use(cookieParser());
 app.use(require('express-session')({
     secret: config.secret,
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: false,
+    store: new MongoStore({
+        url: config.db
+    })
 }));
 app.use(express.static('public'));
 app.use(express.static('labs'));
