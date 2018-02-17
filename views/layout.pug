@@ -3,14 +3,13 @@ html
   head
     title= title
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    link(href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css', rel='stylesheet', media='screen')
-    //- link(rel='stylesheet', href='/stylesheets/style.css')
+    link(href='bootstrap.min.css', rel='stylesheet', media='screen')
+    script(src='js/jquery.slim.min.js')
+    script(src='js/bootstrap.min.js')
   body
     if (error && error.length > 0)
       br
       h4.error-msg= error
       br
 
-    block content
-
-  script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js')
+    block content  
